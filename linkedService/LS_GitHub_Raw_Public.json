@@ -1,0 +1,12 @@
+{
+	"name": "LS_GitHub_Raw_Public",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://api.github.com/repos/<username>/<repo>/contents/source/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
