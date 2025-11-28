@@ -17,7 +17,10 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_Blob_CSV_File_Param",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "@trim(item().name)"
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -34,6 +37,8 @@
 			{
 				"name": "ForEach_File",
 				"type": "ForEach",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Get_CSV_File_List",
@@ -67,6 +72,7 @@
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": true,
+										"wildcardFileName": "*",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
