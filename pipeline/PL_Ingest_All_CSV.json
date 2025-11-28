@@ -98,7 +98,10 @@
 							"inputs": [
 								{
 									"referenceName": "DS_Blob_CSV_File_Param",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"fileName": "@trim(item().name)"
+									}
 								}
 							],
 							"outputs": [
@@ -107,7 +110,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"fileName": {
-											"value": "@item().name",
+											"value": "@trim(item().name)",
 											"type": "Expression"
 										}
 									}
