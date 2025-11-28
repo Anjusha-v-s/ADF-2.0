@@ -1,0 +1,9 @@
+{
+	"name": "ADF4RAG",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b8f1834a-0454-4987-9af8-3110a0e7afb6",
+		"tenantId": "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
+	}
+}
