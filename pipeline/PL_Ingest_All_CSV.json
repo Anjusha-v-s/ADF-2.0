@@ -16,11 +16,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_Blob_CSV_Folder",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "csvcontainer/@{dataset().fileName}"
-						}
+						"referenceName": "DS_Blob_CSV_File_Param",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems"
@@ -100,14 +97,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DS_Blob_CSV_Folder",
-									"type": "DatasetReference",
-									"parameters": {
-										"filename": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DS_Blob_CSV_File_Param",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
