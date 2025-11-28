@@ -17,7 +17,10 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_Blob_CSV_Folder",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "csvcontainer/@{dataset().fileName}"
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -109,8 +112,14 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DS_Blob_Sink_CSV",
-									"type": "DatasetReference"
+									"referenceName": "DS_Blob_Sink_CSV_Param",
+									"type": "DatasetReference",
+									"parameters": {
+										"fileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
