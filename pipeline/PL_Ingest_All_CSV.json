@@ -16,18 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_Blob_CSV_File_Param",
-						"type": "DatasetReference",
-						"parameters": {
-							"fileName": "@item().name"
-						}
+						"referenceName": "DS_Blob_CSV_Folder",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
-						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
