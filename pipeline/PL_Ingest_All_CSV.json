@@ -67,7 +67,6 @@
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": true,
-										"wildcardFileName": "*",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -77,8 +76,7 @@
 								"sink": {
 									"type": "DelimitedTextSink",
 									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings",
-										"copyBehavior": "PreserveHierarchy"
+										"type": "AzureBlobStorageWriteSettings"
 									},
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
@@ -98,11 +96,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DS_Blob_CSV_File_Param",
-									"type": "DatasetReference",
-									"parameters": {
-										"fileName": "@trim(item().name)"
-									}
+									"referenceName": "DS_Blob_CSV_Folder",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
@@ -111,7 +106,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"fileName": {
-											"value": "@trim(item().name)",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									}
