@@ -17,13 +17,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_Blob_CSV_File_Param",
-						"type": "DatasetReference",
-						"parameters": {
-							"fileName": {
-								"value": "@item().name",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems"
