@@ -19,7 +19,10 @@
 						"referenceName": "DS_Blob_CSV_File_Param",
 						"type": "DatasetReference",
 						"parameters": {
-							"fileName": "@trim(item().name)"
+							"fileName": {
+								"value": "@item().name",
+								"type": "Expression"
+							}
 						}
 					},
 					"fieldList": [
